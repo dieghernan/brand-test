@@ -17,8 +17,6 @@ website:
       Visit <a href="https://posit-dev.github.io/brand-yml/">brand-yml</a> for
       more info.
 
-brand: brand.yml
-
 format:
   html:
     css: styles.css
