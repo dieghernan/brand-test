@@ -1,0 +1,86 @@
+# brand-simple
+
+
+<https://examples.quarto.pub/brand-simple/>
+
+This is a simple example of using
+[**brand.yml**](https://posit-dev.github.io/brand-yml/) across a range
+of Quarto supported formats.
+
+The project is a website with a homepage, `index.qmd`, that is rendered
+to multiple formats: `html`, `revealjs`, and `typst`, and a dashboard,
+`dashboard.qmd`.
+
+The brand information stored in `_brand.yml` is:
+
+``` yaml
+meta:
+  name: gitdevr
+  description: >
+    A pkgdown template for my packages. Template based on skin GitDev of my
+    Jekyll template chulapa <https://dieghernan.github.io/chulapa/skins/gitdev>.
+  links:
+    home: https://dieghernan.github.io/gitdevr
+    github: https://github.com/dieghernan/gitdevr
+    twitter: https://x.com/dhernangomez
+
+logo:
+  images:
+    icon: ./assets/favicon.png
+    header: ./assets/logo.png
+  small: header
+  medium: header
+
+color:
+  palette:
+    dark: "#24292f"
+    black: "#22272e"
+    white: "#ffffff"
+    gray: "#6c757d"
+    light: "#f8f9fa"
+    blue: "#0969da"
+    green: "#2a874b"
+    orange: "#c15807"
+    purple: "#8250df"
+    red: "#cf222e"
+  primary: black
+  secondary: gray
+  success: green
+  warning: orange
+  danger: red
+  info: purple
+  foreground: dark
+  background: white
+
+typography:
+  fonts:
+  - family: Inter
+    source: google
+  - family: Inter Tight
+    source: google
+  - family: Fira Code
+    source: google
+  - family: Roboto
+    source: google
+  base: Inter
+  headings:
+    family: Inter Tight
+    weight: 800
+  monospace: Fira Code
+  link:
+    color: blue
+    decoration: "none"
+
+defaults:
+  bootstrap:
+    defaults:
+      navbar-light-bg: "#22272e"
+      navbar-light-color: "#ffffff"
+      input-placeholder-color: "#6a788a"
+```
+
+To preview locally, run:
+
+``` bash
+quarto preview
+```

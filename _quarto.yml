@@ -1,0 +1,25 @@
+project:
+  type: website
+
+website:
+  title: "Simple Brand Example"
+  navbar:
+    title: "gitdevr"
+    tools:
+    - icon: github
+      href: https://github.com/dieghernan/gitdevr
+    - icon: twitter
+      href: https://x.com/dhernangomez
+  favicon: ./assets/favicon.png
+  page-footer:
+    left: "This is a test footer"
+    right: >
+      Visit <a href="https://posit-dev.github.io/brand-yml/">brand-yml</a> for
+      more info.
+
+format:
+  html:
+    css: styles.css
+
+execute:
+  freeze: auto
