@@ -4,12 +4,13 @@ project:
 website:
   title: "Simple Brand Example"
   navbar:
-    title: "gitdevr"
+    title: "rOpenGov"
     tools:
+    - icon: home
+      href: https://ropengov.org/
     - icon: github
-      href: https://github.com/dieghernan/gitdevr
-    - icon: twitter
-      href: https://x.com/dhernangomez
+      href: https://github.com/rOpenGov/
+
   favicon: ./assets/favicon.png
   page-footer:
     left: "This is a test footer"
@@ -21,6 +22,6 @@ format:
   html:
     css: styles.css
 
-highlight-style: tokyo-night-light.theme
+highlight-style: tango
 
 editor: visual

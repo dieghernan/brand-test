@@ -1,12 +1,10 @@
 meta:
-  name: gitdevr
+  name: rogtemplate
   description: >
-    A pkgdown template for my packages. Template based on skin GitDev of my
-    Jekyll template chulapa <https://dieghernan.github.io/chulapa/skins/gitdev>.
+    Private template for use by core rOpenGov packages.
   links:
-    home: https://dieghernan.github.io/gitdevr
-    github: https://github.com/dieghernan/gitdevr
-    twitter: https://x.com/dhernangomez
+    home: https://ropengov.org/
+    github: https://github.com/rOpenGov/
 
 logo:
   images:
@@ -15,51 +13,17 @@ logo:
   small: header
   medium: header
 
-color:
-  palette:
-    dark: "#24292f"
-    black: "#22272e"
-    white: "#ffffff"
-    gray: "#6c757d"
-    light: "#f8f9fa"
-    blue: "#0969da"
-    green: "#2a874b"
-    orange: "#c15807"
-    purple: "#8250df"
-    red: "#cf222e"
-  primary: black
-  secondary: gray
-  success: green
-  warning: orange
-  danger: red
-  info: purple
-  foreground: dark
-  background: white
-
 typography:
   fonts:
-  - family: Inter
+  - family: B612 Mono
     source: google
-  - family: Inter Tight
-    source: google
-    weight: [400, 700, 800]
-
-  - family: Fira Code
-    source: google
-  - family: Roboto
-    source: google
-  base: Inter
-  headings:
-    family: Inter Tight
-    weight: 800
-  monospace: Fira Code
-  link:
-    color: blue
-    decoration: "none"
+  monospace: B612 Mono
 
 defaults:
   bootstrap:
     defaults:
-      navbar-light-bg: "#22272e"
+      navbar-bg: "#343a40"
+      navbar-light-bg: "#343a40"
+      navbar-dark-bg: "#343a40"
       navbar-light-color: "#ffffff"
-      input-placeholder-color: "#6a788a"
+      navbar-dark-color: "#ffffff"
