@@ -1,0 +1,86 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Brand",
+    "section": "",
+    "text": "This is a document themed using brand.yml"
+  },
+  {
+    "objectID": "index.html#overview",
+    "href": "index.html#overview",
+    "title": "Brand",
+    "section": "",
+    "text": "This is a document themed using brand.yml"
+  },
+  {
+    "objectID": "index.html#subheading",
+    "href": "index.html#subheading",
+    "title": "Brand",
+    "section": "Subheading",
+    "text": "Subheading\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+  },
+  {
+    "objectID": "index-reveal.html#overview",
+    "href": "index-reveal.html#overview",
+    "title": "Brand",
+    "section": "Overview",
+    "text": "Overview\nThis is a document themed using brand.yml"
+  },
+  {
+    "objectID": "index-reveal.html#subheading",
+    "href": "index-reveal.html#subheading",
+    "title": "Brand",
+    "section": "Subheading",
+    "text": "Subheading\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "brand-simple-dark-mode/index-reveal.html#overview",
+    "href": "brand-simple-dark-mode/index-reveal.html#overview",
+    "title": "Brand - Dark mode",
+    "section": "Overview",
+    "text": "Overview\nThis is a document themed using brand.yml with both light and dark versions."
+  },
+  {
+    "objectID": "brand-simple-dark-mode/index-reveal.html#subheading",
+    "href": "brand-simple-dark-mode/index-reveal.html#subheading",
+    "title": "Brand - Dark mode",
+    "section": "Subheading",
+    "text": "Subheading\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+  },
+  {
+    "objectID": "brand-simple-dark-mode/index.html",
+    "href": "brand-simple-dark-mode/index.html",
+    "title": "Brand - Dark mode",
+    "section": "",
+    "text": "This is a document themed using brand.yml with both light and dark versions."
+  },
+  {
+    "objectID": "brand-simple-dark-mode/index.html#overview",
+    "href": "brand-simple-dark-mode/index.html#overview",
+    "title": "Brand - Dark mode",
+    "section": "",
+    "text": "This is a document themed using brand.yml with both light and dark versions."
+  },
+  {
+    "objectID": "brand-simple-dark-mode/index.html#subheading",
+    "href": "brand-simple-dark-mode/index.html#subheading",
+    "title": "Brand - Dark mode",
+    "section": "Subheading",
+    "text": "Subheading\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+  },
+  {
+    "objectID": "highlight.html",
+    "href": "highlight.html",
+    "title": "Testing syntax highlighter",
+    "section": "",
+    "text": "Test how pkgdown highlights R code:\nlibrary(\"knitr\")\nlibrary(\"rmarkdown\")\n\n\nlibrary(sf)\nlibrary(jsonlite)\nlibrary(rnaturalearth)\nlibrary(dplyr)\n\n\ndf &lt;- fromJSON(\"https://raw.githubusercontent.com/dieghernan/Country-Codes-and-International-Organizations/master/outputs/Countrycodesfull.json\")\n# Identify Commonwealth acronym\norgsdb &lt;- read.csv(\"https://raw.githubusercontent.com/dieghernan/Country-Codes-and-International-Organizations/master/outputs/CountrycodesOrgs.csv\") |&gt;\n  distinct(org_id, org_name)\n\nkable(orgsdb[grep(\"Common\", orgsdb$org_name), ], format = \"markdown\")\n\n\nISO_memcol &lt;- function(df,\n                       orgtosearch) {\n  ind &lt;- match(orgtosearch, unlist(df[1, \"org_id\"]))\n  or &lt;- lapply(1:nrow(df), function(x) {\n    unlist(df[x, \"org_member\"])[ind]\n  })\n  or &lt;- data.frame(matrix(unlist(or)), stringsAsFactors = F)\n  names(or) &lt;- orgtosearch\n  df2 &lt;- as.data.frame(cbind(df, or, stringsAsFactors = F))\n  return(df2)\n}\ndf_org &lt;- ISO_memcol(df, \"C\")\n\n\ndf_org |&gt;\n  count(C) |&gt;\n  kable(format = \"markdown\")\n\ndf_org |&gt;\n  filter(!is.na(C)) |&gt;\n  select(\n    ISO_3166_3,\n    NAME.EN,\n    C\n  ) |&gt;\n  head() |&gt;\n  kable(format = \"markdown\")\n\n\ntestmap &lt;- ne_countries(50,\n  \"countries\",\n  returnclass = \"sf\"\n) |&gt;\n  select(ISO_3166_3 = adm0_a3) |&gt;\n  full_join(df_org)\n\n# We add also tiny countries\ntiny &lt;- ne_countries(50,\n  \"tiny_countries\",\n  returnclass = \"sf\"\n) |&gt;\n  select(ISO_3166_3 = adm0_a3) |&gt;\n  full_join(df_org)\n\n# Identify dependencies\nISOCommon &lt;- df_org |&gt;\n  filter(!is.na(C)) |&gt;\n  select(\n    ISO_3166_3.sov = ISO_3166_3,\n    C_sov = C\n  )\ntiny &lt;- left_join(tiny, ISOCommon)\ntiny$C &lt;- coalesce(tiny$C, tiny$C_sov)\n\n\n# Projecting the map\ntestmap_rob &lt;- st_transform(testmap, \"+proj=robin\")\ntiny_rob &lt;- st_transform(tiny, \"+proj=robin\")\n\n# Bounding box\nbbox &lt;- st_linestring(rbind(\n  c(-180, 90),\n  c(180, 90),\n  c(180, -90),\n  c(-180, -90),\n  c(-180, 90)\n)) |&gt;\n  st_segmentize(5) |&gt;\n  st_cast(\"POLYGON\") |&gt;\n  st_sfc(crs = 4326) |&gt;\n  st_transform(crs = \"+proj=robin\")\n\n# Plotting\npar(mar = c(0, 0, 0, 0), bg = NA)\nplot(bbox,\n  col = \"#FFFFFF\",\n  border = \"#AAAAAA\",\n  lwd = 1.5\n)\nplot(\n  st_geometry(testmap_rob),\n  col = \"#B9B9B9\",\n  border = \"#FFFFFF\",\n  lwd = 0.1,\n  add = T\n)\n\nplot(\n  st_geometry(testmap_rob |&gt;\n    filter(!is.na(C))),\n  col = \"#346733\",\n  border = \"#FFFFFF\",\n  lwd = 0.1,\n  add = T\n)\n\n# By last, add tiny countries\n# All\nplot(\n  st_geometry(tiny_rob),\n  col = \"#000000\",\n  bg = \"#B9B9B9\",\n  add = T,\n  pch = 21\n)\n# Dependencies\nplot(\n  st_geometry(tiny_rob |&gt;\n    filter(!is.na(C)) |&gt;\n    filter(!is.na(ISO_3166_3.sov))),\n  bg = \"#C6DEBD\",\n  col = \"#000000\",\n  pch = 21,\n  add = T\n)\n# Independent\nplot(\n  st_geometry(tiny_rob |&gt;\n    filter(!is.na(C)) |&gt;\n    filter(is.na(ISO_3166_3.sov))),\n  bg = \"#346733\",\n  col = \"#000000\",\n  pch = 21,\n  add = T\n)\nplot(bbox,\n  col = NA,\n  border = \"#AAAAAA\",\n  lwd = 1.5,\n  add = T\n)"
+  }
+]
