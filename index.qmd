@@ -9,7 +9,6 @@ format:
       - href: highlight.html
         icon: code
         text: Syntax Highlighting
-  typst: default
   revealjs:
     output-file: index-reveal.html
   dashboard:

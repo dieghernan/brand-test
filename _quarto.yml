@@ -21,9 +21,6 @@ format:
   html:
     css: styles.css
 
-highlight-style: github
-
-execute:
-  freeze: auto
+highlight-style: tokyo-night-light.theme
 
 editor: visual
