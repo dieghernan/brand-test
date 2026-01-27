@@ -364,6 +364,7 @@ pre code span.wa
 }
 
 /* --- Dark Mode --- */
+.quarto-dark,
 [data-bs-theme="dark"] {
   a.external-link:not(:has(*)),
   a.uri:not(:has(*)) {
@@ -376,7 +377,7 @@ pre code span.wa
 }
 
 /* Highlighter based in gitdevr --- */
-
+.quarto-dark,
 [data-bs-theme="dark"] {
   pre {
     background-color: RGBA(var(--bs-emphasis-color-rgb), 0.04);

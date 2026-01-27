@@ -17,9 +17,19 @@ website:
       Visit <a href="https://posit-dev.github.io/brand-yml/">brand-yml</a> for
       more info.
 
+brand:
+  light: _brand.yml
+  dark: _brand-dark.yml
+
 format:
   html:
     css: styles.css
 
+highlight-style:
+  light: github-light
+  dark: github-dark
+
 execute:
   freeze: auto
+
+editor: visual
