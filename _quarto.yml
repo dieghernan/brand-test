@@ -4,12 +4,12 @@ project:
 website:
   title: "Simple Brand Example"
   navbar:
-    title: "rOpenGov"
+    title: "rOpenSpain"
     tools:
     - icon: home
-      href: https://ropengov.org/
+      href: https://ropenspain.es
     - icon: github
-      href: https://github.com/rOpenGov/
+      href: https://github.com/rOpenSpain/
 
   favicon: ./assets/favicon.png
   page-footer:
