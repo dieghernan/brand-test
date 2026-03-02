@@ -13,10 +13,16 @@ The project is a website with a homepage, `index.qmd`, that is rendered to
 multiple formats: `html`, `revealjs`, and `typst`, and a dashboard,
 `dashboard.qmd`.
 
-The brand information stored in `_brand.yml` is:
+The brand information stored in `light_brand.yml` is:
 
 ``` yaml
-{{< include _brand.yml >}}
+{{< include light_brand.yml >}}
+```
+
+The brand information stored in `dark_brand.yml` is:
+
+``` yaml
+{{< include dark_brand.yml >}}
 ```
 
 To preview locally, run:

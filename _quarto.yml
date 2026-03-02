@@ -4,12 +4,12 @@ project:
 website:
   title: "Simple Brand Example"
   navbar:
-    title: "rOpenSpain"
+    title: "dieghernan"
     tools:
     - icon: home
-      href: https://ropenspain.es
+      href: https://dieghernan.github.io
     - icon: github
-      href: https://github.com/rOpenSpain/
+      href: https://github.com/dieghernan/
 
   favicon: ./assets/favicon.png
   page-footer:
@@ -21,7 +21,11 @@ website:
 format:
   html:
     css: styles.css
-
-highlight-style: tango
+    respect-user-color-scheme: true
+    toc: true
 
 editor: visual
+
+brand:
+  light: light_brand.yml
+  dark: dark_brand.yml
