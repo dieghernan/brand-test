@@ -27,7 +27,7 @@ jobs:
       run: |
         
         install.packages("pak")
-        pak::pak(c("knitr", "rmarkdown", "quarto", "yaml", "cli"))
+        pak::pak(c("knitr", "rmarkdown", "quarto", "yaml", "cli", "pkgdown"))
 
       shell: Rscript {0}
 
