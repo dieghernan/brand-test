@@ -1,6 +1,7 @@
 ---
 title: quarto features
 subtitle: Using this for shortcodes
+format: html
 ---
 
 ## Callouts

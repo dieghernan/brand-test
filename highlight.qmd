@@ -1,5 +1,6 @@
 ---
 title: "Testing syntax highlighter"
+format: html
 ---
 
 Test how `pkgdown` highlights **R** code:
