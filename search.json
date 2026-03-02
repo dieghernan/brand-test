@@ -11,14 +11,21 @@
     "href": "quarto-features.html",
     "title": "quarto features",
     "section": "",
-    "text": "This should only be shown when required\n\n\n\nMultiple paragraphs\n\nFirst paragraph\nSecond paragraph\n\n\n\nSome R code\n\n\n1 + 2\n\n[1] 3"
+    "text": "Note\n\n\n\nNote that there are five types of callouts, including: note, warning, important, tip, and caution.\n\n\n\n\n\n\n\n\nTipTip with Title\n\n\n\nThis is an example of a callout with a title.\n\n\n\n\n\n\n\n\nCautionExpand To Learn About Collapse\n\n\n\n\n\nThis is an example of a ‘folded’ caution callout that can be expanded by the user. You can use collapse=\"true\" to collapse it by default or collapse=\"false\" to make a collapsible callout that is expanded by default.\n\n\n\n\n\n\n\n\n\nNotePay Attention\n\n\n\nUsing callouts is an effective way to highlight content that your reader give special consideration or attention.\n\n\n\n\n\n\n\n\nNotePay Attention\n\n\n\nUsing callouts is an effective way to highlight content that your reader give special consideration or attention.\n\n\n\n\n\n\n\n\nTip 1: Cross-Referencing a Tip\n\n\n\nAdd an ID starting with #tip- to reference a tip.\n\n\nSee Tip 1…"
+  },
+  {
+    "objectID": "quarto-features.html#callouts",
+    "href": "quarto-features.html#callouts",
+    "title": "quarto features",
+    "section": "",
+    "text": "Note\n\n\n\nNote that there are five types of callouts, including: note, warning, important, tip, and caution.\n\n\n\n\n\n\n\n\nTipTip with Title\n\n\n\nThis is an example of a callout with a title.\n\n\n\n\n\n\n\n\nCautionExpand To Learn About Collapse\n\n\n\n\n\nThis is an example of a ‘folded’ caution callout that can be expanded by the user. You can use collapse=\"true\" to collapse it by default or collapse=\"false\" to make a collapsible callout that is expanded by default.\n\n\n\n\n\n\n\n\n\nNotePay Attention\n\n\n\nUsing callouts is an effective way to highlight content that your reader give special consideration or attention.\n\n\n\n\n\n\n\n\nNotePay Attention\n\n\n\nUsing callouts is an effective way to highlight content that your reader give special consideration or attention.\n\n\n\n\n\n\n\n\nTip 1: Cross-Referencing a Tip\n\n\n\nAdd an ID starting with #tip- to reference a tip.\n\n\nSee Tip 1…"
   },
   {
     "objectID": "quarto-features.html#details-tag",
     "href": "quarto-features.html#details-tag",
     "title": "quarto features",
-    "section": "",
-    "text": "This should only be shown when required\n\n\n\nMultiple paragraphs\n\nFirst paragraph\nSecond paragraph\n\n\n\nSome R code\n\n\n1 + 2\n\n[1] 3"
+    "section": "Details tag",
+    "text": "Details tag\n\nThis should only be shown when required\n\n\n\nMultiple paragraphs\n\nFirst paragraph\nSecond paragraph\n\n\n\nSome R code\n\n\n1 + 2\n\n[1] 3"
   },
   {
     "objectID": "quarto-features.html#tables",
@@ -74,7 +81,7 @@
     "href": "quarto-features.html#tabsets",
     "title": "quarto features",
     "section": "Tabsets",
-    "text": "Tabsets\n\nTabset with pills\n\nTab 1\nblablablabla\n1 + 1\nShould be “cool” heading below\n\ncool\nStuff\n\n\n\nTab 2\nblop\n\n\n\nTabset without pills\n\nTab 1\nsomething nice\n\nplot(1:42)\n\n\n\n\n\n\n\n\n\n\nTab 2\nThis tab should be active\n\n\n\nFading tabset\n\nEnglish\nHello!\n\n\nFrench\nBonjour!\n\n\nGerman\nGuten tag."
+    "text": "Tabsets\n\nRPython\n\n\nfizz_buzz &lt;- function(fbnums = 1:50) {\n  output &lt;- dplyr::case_when(\n    fbnums %% 15 == 0 ~ \"FizzBuzz\",\n    fbnums %% 3 == 0 ~ \"Fizz\",\n    fbnums %% 5 == 0 ~ \"Buzz\",\n    TRUE ~ as.character(fbnums)\n  )\n  print(output)\n}\n\n\ndef fizz_buzz(num):\n  if num % 15 == 0:\n    print(\"FizzBuzz\")\n  elif num % 5 == 0:\n    print(\"Buzz\")\n  elif num % 3 == 0:\n    print(\"Fizz\")\n  else:\n    print(num)"
   },
   {
     "objectID": "quarto-features.html#deep-headings",
