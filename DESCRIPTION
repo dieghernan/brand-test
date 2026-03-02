@@ -1,0 +1,9 @@
+Type: quarto-web
+Description: Example brand project
+Depends:
+    knitr,
+    quarto,
+    rmarkdown,
+    tidyverse,
+    webshot2,
+    yaml
