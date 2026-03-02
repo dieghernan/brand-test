@@ -29,6 +29,7 @@ format:
     css: styles.css
     respect-user-color-scheme: true
     toc: true
+    highlight-style: arrow
 
 editor: visual
 
