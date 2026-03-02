@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>quarto features – Simple Brand Example</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="././assets/favicon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8caf6eaa0938078aad3b4e3e78d03e50.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-391dc9eaa9d5ee7385b50e8209b8eefe.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8caf6eaa0938078aad3b4e3e78d03e50.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-482c5e53e31b8d4dcd5798e30a5e1454.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-f3d655b9f67dffd4fefb00075d47b94e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-482c5e53e31b8d4dcd5798e30a5e1454.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/kbd/kbd.js"></script>
+<link href="site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./assets/logo.png" alt="" class="navbar-logo light-content">
+    <img src="./assets/logo.png" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">dieghernan</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./quarto-features.html" aria-current="page"> 
+<span class="menu-text">Quarto Features</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools tools-wide">
+    <a href="https://dieghernan.github.io" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-home"></i></a>
+    <a href="https://github.com/dieghernan/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#details-tag" id="toc-details-tag" class="nav-link active" data-scroll-target="#details-tag">Details tag</a></li>
+  <li><a href="#tables" id="toc-tables" class="nav-link" data-scroll-target="#tables">Tables</a></li>
+  <li><a href="#math" id="toc-math" class="nav-link" data-scroll-target="#math">Math</a></li>
+  <li><a href="#search" id="toc-search" class="nav-link" data-scroll-target="#search">Search</a></li>
+  <li><a href="#buttons" id="toc-buttons" class="nav-link" data-scroll-target="#buttons">Buttons</a></li>
+  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code">Code</a>
+  <ul class="collapse">
+  <li><a href="#line-width" id="toc-line-width" class="nav-link" data-scroll-target="#line-width">Line width</a></li>
+  <li><a href="#should-be-highlighted" id="toc-should-be-highlighted" class="nav-link" data-scroll-target="#should-be-highlighted">Should be highlighted</a></li>
+  <li><a href="#shouldnt-be-highlighted" id="toc-shouldnt-be-highlighted" class="nav-link" data-scroll-target="#shouldnt-be-highlighted">Shouldn’t be highlighted</a></li>
+  <li><a href="#pre-blocks" id="toc-pre-blocks" class="nav-link" data-scroll-target="#pre-blocks"><code>pre</code> blocks</a></li>
+  <li><a href="#crayon" id="toc-crayon" class="nav-link" data-scroll-target="#crayon">Crayon</a></li>
+  </ul></li>
+  <li><a href="#quoted-text" id="toc-quoted-text" class="nav-link" data-scroll-target="#quoted-text">Quoted text</a></li>
+  <li><a href="#this-section-is-unnumbered" id="toc-this-section-is-unnumbered" class="nav-link" data-scroll-target="#this-section-is-unnumbered">This section is unnumbered</a></li>
+  <li><a href="#tabsets" id="toc-tabsets" class="nav-link" data-scroll-target="#tabsets">Tabsets</a>
+  <ul class="collapse">
+  <li><a href="#tabset-with-pills" id="toc-tabset-with-pills" class="nav-link" data-scroll-target="#tabset-with-pills">Tabset with pills</a></li>
+  <li><a href="#tabset-without-pills" id="toc-tabset-without-pills" class="nav-link" data-scroll-target="#tabset-without-pills">Tabset without pills</a></li>
+  <li><a href="#fading-tabset" id="toc-fading-tabset" class="nav-link" data-scroll-target="#fading-tabset">Fading tabset</a></li>
+  </ul></li>
+  <li><a href="#deep-headings" id="toc-deep-headings" class="nav-link" data-scroll-target="#deep-headings">Deep headings</a>
+  <ul class="collapse">
+  <li><a href="#heading-3" id="toc-heading-3" class="nav-link" data-scroll-target="#heading-3">Heading 3</a></li>
+  </ul></li>
+  <li><a href="#very-long-words" id="toc-very-long-words" class="nav-link" data-scroll-target="#very-long-words">Very long words</a></li>
+  <li><a href="#keyboard" id="toc-keyboard" class="nav-link" data-scroll-target="#keyboard">Keyboard</a></li>
+  <li><a href="#lists" id="toc-lists" class="nav-link" data-scroll-target="#lists">Lists</a></li>
+  <li><a href="#footnotes" id="toc-footnotes" class="nav-link" data-scroll-target="#footnotes">Footnotes</a></li>
+  <li><a href="#equations" id="toc-equations" class="nav-link" data-scroll-target="#equations">Equations</a></li>
+  <li><a href="#other-blocks" id="toc-other-blocks" class="nav-link" data-scroll-target="#other-blocks">Other blocks</a></li>
+  <li><a href="#shortcodes" id="toc-shortcodes" class="nav-link" data-scroll-target="#shortcodes">Shortcodes</a>
+  <ul class="collapse">
+  <li><a href="#a-section" id="toc-a-section" class="nav-link" data-scroll-target="#a-section">A section</a></li>
+  <li><a href="#another-example" id="toc-another-example" class="nav-link" data-scroll-target="#another-example">Another example</a></li>
+  </ul></li>
+  <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
+  <li><a href="#video" id="toc-video" class="nav-link" data-scroll-target="#video">Video</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">quarto features</h1>
+<p class="subtitle lead">Using this for shortcodes</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="details-tag" class="level2">
+<h2 class="anchored" data-anchor-id="details-tag">Details tag</h2>
+<details>
+This should only be shown when required
+</details>
+<details>
+<summary>
+Multiple paragraphs
+</summary>
+<p>First paragraph</p>
+<p>Second paragraph</p>
+</details>
+<details>
+<summary>
+Some R code
+</summary>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+</div>
+</details>
+</section>
+<section id="tables" class="level2">
+<h2 class="anchored" data-anchor-id="tables">Tables</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">col 1</th>
+<th style="text-align: left;">col 2</th>
+<th style="text-align: center;">col 3</th>
+<th style="text-align: center;">col 4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Brightness</td>
+<td style="text-align: left;">Total brightness, total reflectance, spectral intensity</td>
+<td style="text-align: center;"><span class="math display">\[y = x^2\]</span></td>
+<td style="text-align: center;">test</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="math" class="level2">
+<h2 class="anchored" data-anchor-id="math">Math</h2>
+<p><span class="math display">\[f(x) = \dfrac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu^2)}{2\sigma^2}}\]</span></p>
+<p>Inline equations: <span class="math inline">\(y=x^2\)</span></p>
+</section>
+<section id="search" class="level2">
+<h2 class="anchored" data-anchor-id="search">Search</h2>
+<p><mark>This text should be</mark> marked as highlighted by search.</p>
+<div class="mark">
+<p>This text too.</p>
+</div>
+</section>
+<section id="buttons" class="level2">
+<h2 class="anchored" data-anchor-id="buttons">Buttons</h2>
+<div class="d-grid gap-2 col-6 mx-auto">
+<button type="button" class="btn btn-primary btn-lg">Primary</button>
+<button type="button" class="btn btn-secondary btn-lg">Secondary</button>
+<button type="button" class="btn btn-success btn-lg">Success</button>
+<button type="button" class="btn btn-danger btn-lg">Danger</button>
+<button type="button" class="btn btn-warning btn-lg">Warning</button>
+<button type="button" class="btn btn-info btn-lg">Info</button>
+<button type="button" class="btn btn-light btn-lg">Light</button>
+<button type="button" class="btn btn-dark btn-lg">Dark</button>
+</div>
+</section>
+<section id="code" class="level2">
+<h2 class="anchored" data-anchor-id="code">Code</h2>
+<section id="line-width" class="level3">
+<h3 class="anchored" data-anchor-id="line-width">Line width</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>pkgdown<span class="sc">:::</span><span class="fu">ruler</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">rep</span>(<span class="st">"x "</span>, <span class="dv">100</span>), <span class="at">sep =</span> <span class="st">""</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">rep</span>(<span class="st">"xy"</span>, <span class="dv">100</span>), <span class="at">sep =</span> <span class="st">""</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>xyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxy</code></pre>
+</div>
+</div>
+</section>
+<section id="should-be-highlighted" class="level3">
+<h3 class="anchored" data-anchor-id="should-be-highlighted">Should be highlighted</h3>
+<p>Valid R code in <code>\preformatted{}</code>:</p>
+<pre><code>mean(a + 1)</code></pre>
+<p>R code in <code>R</code> block:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(a <span class="sc">+</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>R code in <code>r</code> block:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(a <span class="sc">+</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Yaml</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">yaml</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">a</span><span class="kw">,</span><span class="at"> </span><span class="dv">1</span><span class="kw">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="shouldnt-be-highlighted" class="level3">
+<h3 class="anchored" data-anchor-id="shouldnt-be-highlighted">Shouldn’t be highlighted</h3>
+<p>Non-R code in <code>\preformatted{}</code></p>
+<pre><code>yaml: [a, b, c]</code></pre>
+</section>
+<section id="pre-blocks" class="level3">
+<h3 class="anchored" data-anchor-id="pre-blocks"><code>pre</code> blocks</h3>
+<p>Testing margins and copy buttons on small screens.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>txt <span class="ot">&lt;-</span> <span class="st">"Not wrapped; check the copy button behavior."</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section>
+<p>Wrapped in a <code>&lt;section&gt;</code> (e.g.&nbsp;<code>section &gt; div &gt; pre</code>)</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>txt <span class="ot">&lt;-</span> <span class="st">"Wrapped in section"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<blockquote class="blockquote">
+<p>This is a blockquote with enough text to test the width of the code block and verify whether it aligns with the paragraph width.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>txt <span class="ot">&lt;-</span> <span class="st">"Wrapped in blockquote; margins are preserved."</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Continue…</p>
+</blockquote>
+<ul>
+<li><p>This list item includes enough text to test the width of the code block and check whether it matches the paragraph width.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>txt <span class="ot">&lt;-</span> <span class="st">"Wrapped in li; margins are preserved."</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>Another bullet.</p>
+<ol type="1">
+<li><p>Nested list.</p></li>
+<li><p>Second level item with enough text to test the width of the code block and confirm alignment with the paragraph.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>txt <span class="ot">&lt;-</span> <span class="st">"Wrapped in li; margins are preserved."</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>Nested list continues.</p></li>
+</ol></li>
+</ul>
+<details>
+<summary>
+<code>&lt;pre&gt;</code> block inside a <code>&lt;details&gt;</code> element.
+</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>txt <span class="ot">&lt;-</span> <span class="st">"Wrapped in details"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</section>
+<section id="crayon" class="level3">
+<h3 class="anchored" data-anchor-id="crayon">Crayon</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(cli<span class="sc">::</span><span class="fu">col_red</span>(<span class="st">"This is red"</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>This is red </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(cli<span class="sc">::</span><span class="fu">col_blue</span>(<span class="st">"This is blue</span><span class="sc">\n</span><span class="st">"</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>This is blue
+ </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">message</span>(cli<span class="sc">::</span><span class="fu">col_green</span>(<span class="st">"This is green"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>This is green</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">warning</span>(cli<span class="sc">::</span><span class="fu">style_bold</span>(<span class="st">"This is bold"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: This is bold</code></pre>
+</div>
+</div>
+<p>Some text</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">stop</span>(cli<span class="sc">::</span><span class="fu">style_italic</span>(<span class="st">"This is italic"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error:
+! This is italic</code></pre>
+</div>
+</div>
+<p>Some more text</p>
+</section>
+</section>
+<section id="quoted-text" class="level2">
+<h2 class="anchored" data-anchor-id="quoted-text">Quoted text</h2>
+<blockquote class="blockquote">
+<p>Single-line quote about something miscellaneous.</p>
+</blockquote>
+<figure class="figure">
+<blockquote class="blockquote">
+<p>A Boostrap 5 blockquote with footer.</p>
+</blockquote>
+<figcaption class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite>
+</figcaption>
+</figure>
+<div class="line-block">Flush<br>
+&nbsp;1 space indent<br>
+&nbsp;&nbsp;2 space indent<br>
+&nbsp;&nbsp;&nbsp;3 space indent</div>
+</section>
+<section id="this-section-is-unnumbered" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="this-section-is-unnumbered">This section is unnumbered</h2>
+<p>There should however be no bug here!</p>
+</section>
+<section id="tabsets" class="level2">
+<h2 class="anchored" data-anchor-id="tabsets">Tabsets</h2>
+<section id="tabset-with-pills" class="level3 tabset tabset-pills">
+<h3 class="tabset tabset-pills anchored" data-anchor-id="tabset-with-pills">Tabset with pills</h3>
+<section id="tab-1" class="level4">
+<h4 class="anchored" data-anchor-id="tab-1">Tab 1</h4>
+<p>blablablabla</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Should be “cool” heading below</p>
+<section id="cool" class="level5">
+<h5 class="anchored" data-anchor-id="cool">cool</h5>
+<p>Stuff</p>
+</section>
+</section>
+<section id="tab-2" class="level4">
+<h4 class="anchored" data-anchor-id="tab-2">Tab 2</h4>
+<p>blop</p>
+</section>
+</section>
+<section id="tabset-without-pills" class="level3 tabset">
+<h3 class="tabset anchored" data-anchor-id="tabset-without-pills">Tabset without pills</h3>
+<section id="tab-1-1" class="level4">
+<h4 class="anchored" data-anchor-id="tab-1-1">Tab 1</h4>
+<p>something nice</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">42</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="quarto-features_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" alt="Another test plot" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="tab-2-1" class="level4 active">
+<h4 class="active anchored" data-anchor-id="tab-2-1">Tab 2</h4>
+<p>This tab should be active</p>
+</section>
+</section>
+<section id="fading-tabset" class="level3 tabset tabset-fade">
+<h3 class="tabset tabset-fade anchored" data-anchor-id="fading-tabset">Fading tabset</h3>
+<section id="english" class="level4">
+<h4 class="anchored" data-anchor-id="english">English</h4>
+<p>Hello!</p>
+</section>
+<section id="french" class="level4">
+<h4 class="anchored" data-anchor-id="french">French</h4>
+<p>Bonjour!</p>
+</section>
+<section id="german" class="level4">
+<h4 class="anchored" data-anchor-id="german">German</h4>
+<p>Guten tag.</p>
+</section>
+</section>
+</section>
+<section id="deep-headings" class="level2">
+<h2 class="anchored" data-anchor-id="deep-headings">Deep headings</h2>
+<section id="heading-3" class="level3">
+<h3 class="anchored" data-anchor-id="heading-3">Heading 3</h3>
+<section id="heading-4" class="level4">
+<h4 class="anchored" data-anchor-id="heading-4">Heading 4</h4>
+<section id="heading-5" class="level5">
+<h5 class="anchored" data-anchor-id="heading-5">Heading 5</h5>
+</section>
+</section>
+</section>
+</section>
+<section id="very-long-words" class="level2">
+<h2 class="anchored" data-anchor-id="very-long-words">Very long words</h2>
+<p>This word should be broken across multiple lines on mobile, rather than making the page scroll horizontally:</p>
+<p>Ccccccccccccaaaaaaaaaaaaaaatttttttttttttttttssssssssssssssss</p>
+</section>
+<section id="keyboard" class="level2">
+<h2 class="anchored" data-anchor-id="keyboard">Keyboard</h2>
+<ul>
+<li>Keyboard shortcut: <kbd title="Shift-Ctrl-P" aria-hidden="true">Shift-Ctrl-P</kbd><span class="visually-hidden">Shift-Ctrl-P</span></li>
+</ul>
+</section>
+<section id="lists" class="level2">
+<h2 class="anchored" data-anchor-id="lists">Lists</h2>
+<ul>
+<li><p>item 2</p>
+<p>Continued (indent 4 spaces)</p></li>
+</ul>
+<p>Another example</p>
+<ol type="1">
+<li><p>ordered list</p></li>
+<li><p>item 2</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello, World!"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol type="A">
+<li>sub-sub-item 1</li>
+</ol></li>
+</ol>
+<p>A task list</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Task 1</label></li>
+<li><label><input type="checkbox" checked="">Task 2</label></li>
+</ul>
+<p>A definition</p>
+<dl>
+<dt>term</dt>
+<dd>
+<p>definition</p>
+</dd>
+</dl>
+</section>
+<section id="footnotes" class="level2">
+<h2 class="anchored" data-anchor-id="footnotes">Footnotes</h2>
+<p>Here is a footnote reference,<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> and another.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>This paragraph won’t be part of the note, because it isn’t indented.</p>
+<p>Here is an inline note.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+</section>
+<section id="equations" class="level2">
+<h2 class="anchored" data-anchor-id="equations">Equations</h2>
+<p>inline math: <span class="math inline">\(E = mc^{2}\)</span></p>
+<p>display math:</p>
+<p><span class="math display">\[E = mc^{2}\]</span></p>
+</section>
+<section id="other-blocks" class="level2">
+<h2 class="anchored" data-anchor-id="other-blocks">Other blocks</h2>
+<div class="line-block">Line Block<br>
+&nbsp;&nbsp;Spaces and newlines<br>
+&nbsp;&nbsp;are preserved</div>
+<p><span class="smallcaps">This text is smallcaps</span></p>
+<p><u>This text is underlined</u></p>
+<p><mark>This text is highlighted</mark></p>
+<p>endash: –</p>
+<p>emdash: —</p>
+</section>
+<section id="shortcodes" class="level2">
+<h2 class="anchored" data-anchor-id="shortcodes">Shortcodes</h2>
+<p>The subtitle of this document is as follows: Using this for shortcodes</p>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAADICAYAAADGFbfiAAAIcklEQVR4nO3csZYM6xrH4XIBuAAyESIJIhJEJGQkIyMhIiIiIiIhMwkZCRESIiQkiES4AFyAU/92vq2mTvXM7HfRM2et50l099RUfz1rr/fXX/XM3vLp06efHQD8SwICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQLCpvH9+/fu48eP3datW7s9e/b0j/yvV69edW/evOlvdd3Jkye7nTt39remffjwoXv+/Hl/q+uOHDky95x/Ul7Do0ePZv9mbfv375/9O8+XL19mx0eOPXjwYH9r2vDY3bt3d0ePHu1vwcYREDaNM2fOzAJx4MCB7sGDB/0jK12+fLl7+PBhf+u3K1eudGfPnu1vrTR17KlTp7obN270t/6O27dvd7du3epvrTRvjffu3euuX7/e3/pt3hrzWvKahhKbO3fudNu2bevvweIJCJtCG6Zt9zEOSAZzBvTS0lJ39erV2Tv8HJ/Bev/+/dkwbdq5MowzvCP3c2yGcx7/04brSyyy60gM87zZVY3X+OzZs+7cuXOztWSNicC1a9e65eXl7sKFC93Fixf7o37JeRLX7Dru3r07O3d7jUv98+XnARtBQNhwuTRz4sSJ2SWZDPnxDiSxOHz4cLdjx47uyZMn/SO/5PFDhw51e/funQ3oZt++fbMQvXz5sr/3W47dsmVL9+LFi/7en5W1vH79evYahnIZLa8toUi8mjz2+fPn2RoTj+b48ePd169fZ2tsjyc0CU4eSzya06dPz55z/DgsioCw4fLu+v3797NhmuE/DkiGZ4Zo3qnn3f1QHs/X2xBtA3tp4p15e4f/+PHj2S5nLBE4f/78LFTDYR+5fJTBXrlktGvXrhWvKcFMEBOb7CiG2s4ij+frMf7+JrHNurLWBAoWTUDYUOOBOTUs2+Wh7DKGl4Fi/LXx+YbWM3Db+YbHtEtISxNRWkuilChmLVlTtPONL1XF+Gvj+0OrxRIWQUDYMHknngGYYLThOhWQDP0M/xaJoew+sgtpu5MWgKljVxvGTQZ+LiP9+PFjtqvJbiNr/Pbt2+zyWe7/G1l31t/WF22Nec0Jy1Bb49J/o9Duz1vz1M8LFkVA2DAZjO3SVRvMUwOxXevv/1vt7600HrBtOFcDEu24pX6I51JXAjA17NeSGCU+P3/+XBGf1daY78mOpf0M2lrmrXnq5wWLIiBsiHapaTxEpwZiC8jbt2//GcLNeMCuNpzHx64m0cjuIc+X334arme92jnG8VltjdmV5fOR9jNYa81TPy9YFAFh4TIk8848w7l9ztBkuObD8DyeD7Pzb/vwe2rgthC1zyzy/fOG81rDeKgdG1PnWktbV9aUtQ0lKonL8LJW0563rXF8f2i8W4FFExAWrg3FtbTB2KIwficf7WttyI8/Exlqx06dZyyBy6WnxG78a8JraYHIziWXrsba65+KQlt/+1qePzuSqRCtdh5YBAFhU5m6JLPabxvl8Xy9/++4v/drdzNv4GYwZ0Dnw/HscuZpoUk0cukst6eCNGUYj7yG7LKm5HXm85X8SvFQ223l8Xw95v39StvlrCeI8DcICJtKBus4INGGaAZrG8oJRwIyjkU+M8lff+fYFooWlqlzD+W4nDPHZTBHnnv4W1nztHi0P2Jc7dgcl+OzxhaKXJLKc2fnk+9vhkHLLqvJ68lvh717966/B4snIGwq8wKSnUN2EBm22Q1k2ObddwZoLhO1UES7tJNjc3knMoATnOHAnpLvy/cnFu2cuZ/Hjx07NvtDwik5d4Z/5LjsQMaG/7PEhCq/Lrx9+/bZ60ls8npynoRruKPIa03EEtDswPLZ0PLycvf06dPZ965nZwR/g4CwqcwLSOQdey7xZDcQGaQZtlNBSHAuXbr0z7HZFdy8eXPFYB7L+bMzSHTGnynk8Xw9zzd1jux6crlrNePzJhaJYv7CPbLGBCI7qrGpYxOO4flg0QSE/yt5N55hGu3d/Gqye4j1HLtR2hoTwuxEVpPXnp/Beo6Fv01AACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAkv8AzWamUw5ZWW4AAAAASUVORK5CYII=" class="img-fluid"></p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<section id="a-section" class="level3">
+<h3 class="anchored" data-anchor-id="a-section">A section</h3>
+<p>Here we define a plot.</p>
+<section id="note-the-following-plot" class="level4">
+<h4 class="anchored" data-anchor-id="note-the-following-plot">Note the following plot</h4>
+<div id="a-plot">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="quarto-features_files/figure-html/a-cell-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="another-example" class="level3">
+<h3 class="anchored" data-anchor-id="another-example">Another example</h3>
+<p>We will define some values here. </p>
+<p>The output of that inline code cell is <span id="a-span">some code</span>. Etc.</p>
+</section>
+</section>
+<section id="figures" class="level2">
+<h2 class="anchored" data-anchor-id="figures">Figures</h2>
+<div id="fig-puppies" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-puppies-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-puppies" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-pitbull" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-pitbull-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/pitbull.jpg" class="img-fluid figure-img" data-ref-parent="fig-puppies">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-pitbull-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) A sketch of a pitbull puppy
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-puppies" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-shar-pei" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-shar-pei-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/shar-pei.jpg" class="img-fluid figure-img" data-ref-parent="fig-puppies">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-shar-pei-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) A sketch of a sharpei puppy
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-puppies" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-placeholder" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-placeholder-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+gAAADICAYAAAB758tPAAAK7ElEQVR4nO3dsbYM2R7H8fIAMx4AkYiIBBEJIhIykiMjISMhIiEjIXMSMhIiJERIiIhEeAA8gFu/urPPKTXV7bjjrvmvdT6ftYzT3burd3VivntX99ny4cOH7x0AAADwrxLoAAAAUIBABwAAgAIEOgAAABQg0AEAAKAAgQ4AAAAFCHQAAAAoQKADAABAAQIdAAAAChDoAAAAUIBABwAAgAIEOgAAABQg0AEAAKAAgQ4AAAAFCHQAAAAoQKADAABAAQIdAAAAChDoAAAAUIBABwAAgAIEOgAAABQg0AEAAKAAgQ4AAAAFCHQAAAAoQKADAABAAQIdAAAAChDoAAAAUIBABwAAgAIEOgAAABQg0AEAAKAAgQ4AAAAFCHQAAAAoQKADAABAAQIdAAAAChDoAAAAUIBABwAAgAIEOgAAABQg0AEAAKAAgQ4AAAAFCHQAAAAoQKADAABAAQIdAAAAChDoAAAAUIBABwAAgAIEOgAAABQg0AEAAKAAgQ4AAAAFCHQAAAAoQKADAABAAQIdAAAAChDoAAAAUIBABwAAgAIEOgAAABQg0AEAAKAAgQ4AAAAFCHQAAAAoQKADAABAAQIdAAAAChDoAAAAUIBABwAAgAIEOgAAABQg0AEAAKAAgQ4AAAAFCHQAAAAoQKADAABAAQIdAAAAChDoAAAAUIBABwAAgAIEOgAAABQg0AEAAKAAgQ4AAAAFCHQAAAAoQKADAABAAQIdAAAAChDoAAAAUIBABwAAgAIEOgAAABQg0AEAAKAAgQ4AAAAFCHQAAAAoQKADAABAAQIdAAAAChDoAAAAUIBABwAAgAIEOgAAABQg0AEAAKAAgQ4AM75+/dq9f/++27ZtW7d9+/b+nnmfPn3qnj17NozPuBMnTvT3zsuYhw8fDn9n7OHDh7s///yzf+TvMibHzfEzJsfN3/9vL1++7F6/ft3/1HX79+8f/iyT82lzzPnkvBZ5+vTp8J5uZCwAbEYCHQBGEpGvXr3qHjx4METy+fPnuwsXLvSP/F3GXrx4cRjX7N69u7t3794QoWPv3r3rTp8+/cPYBOrt27eH54xl7Llz54bwbXK8HHc69nfJa126dGkI9LG83vXr14e/x3IeOZ/Mtckcb9y40R05cqS/tW5ubGTsyZMn+58AgBDoADCyc+fO/r/rFgV6gvb48ePDDvudO3eG2E6wnz17tjtw4MAQ000C9dChQ93379+7+/fvD7GbEM7YHTt2dI8ePepHrcvYL1++DMfNsRK2p06d6rZs2dI9f/58COHfaTy/K1eurEXz3bt3u2vXrg3znc4xwZ1zyBwT5Hk/cj6fP38exub9aLKIkQWPy5cvd2fOnFkbm930nM94LABsZgIdAGYkPhOhiwL96tWr3erq6hDiieim3Z9ITdhGC93pjvHNmze7W7du/XB/QjZBO33ddn+L3N8tx9+1a9fanJu8Zh4bn08WDLI4sbKyMgR9096zldH9ifHEf84v59ksuh8ANjOBDgAzWmxOQ7lJXGbH+cWLF/2tdXPPy+53Lpvv/83tb62bi9TsLGcnfm5nObv7+Ux4duHnZCEgn1tf6QM5u9pNXieXr+/bt29tThvVFhHaTnm0RYjp4kTs2bOn27p16zD/yJyyODF+fnPs2LFhx/3Nmzf9LQBAoAPAjLnQHlsWy9PHprfH8lh2prNDHQn2XN7+9u3b/taPfha0uVT94MGDQyDneO1S+JxHzifRPI3+n2mBnuNlnrFowSGmj7Ud+LnXXvYYAGxGAh0AZiRoE7Zzgb7ssUh0j4N8entsGrS/MnZOdt+zC7/S76LnMvOfzfVn5hYMls1juru+bGyL/zYWADY7gQ4AM5aF7bLHIpd55wvdstOdXe29e/duOLr/aaBHG5ed6XwbfAJ7ein+RrTL06fnmTnmy/HmjjmN7jaXuTlPxwLAZifQAWDGsghf9lhMAza3NxrdvzJ2kXzmPJfDZ5EgCwT/SwDnGPkiuD/++GPtPJosQHz79m12HtPoXjbn6VgA2OwEOgDMWBbh7VvMx1/uNjaN7OntsRzn48ePa5eQLxu7LHanMvecQz7bnZ30X5Goz/Mzr8yjffa8WTaP9rny9pn1ZWMFOgD8SKADwIzEbSJ1LtBjUUgnbnNJe76xPN9cHtlxnvt95zE9zrKgzefB5745fqrNPb82Lb9r/FcCOPPPc7MIkcWHLEJM5TPu+ax7LuFvX0TXTOffPpOec0+wjy07DgBsRgIdAGa0yF0U6LmEPPHb/zva31qX4Ex4jn9feW7n/mmIJoKzg77y1xe6xaKgzSXnCfQEc8J5kQR2jplL7LNAkHnmUvccb/zai7Qd8PH8p9pn03P8LEQ0ee0sTowXHHKsHDNzztzHcj4bWXAAgM1CoAPAjJ8FegvPacjmOXluLivP5eXRxk6PlfvyWOK5xXiem2MkZhO1zUYvB2+B38ZlYSALBCujRYBF2nymrz3VFgty/LxO08I9z80xItHefvVb3pOmzWv6ngDAZibQAeAviePXr1/3P/03QhOridDsCMe+ffuG2012p/N7yRO+2bFeXV3tnjx50q3MxHC79DsxmuPl50R3QjZBO5ZwTcBOx+bntjM9p+3IT4/ZXjsxPZ7/WIvz7LKPFxzGEtNNWwg4evRot9Kfb96H3Jf34fHjx/2IdS3cp2Pb7nleEwAQ6ACwJhGcXepFEqiJ5iYRn7BN/DYrfYBO4zyyk5zwno7N8aaBmrGZy2ofwE3iPJeUT8eOJc7zxW4J5LZ7H5lnFhOyi53d+rlj5LPwP9P/P0P/33WJ7NXJHLMwMH7tJuczfm/z+fiMbVcOAAACHQD+sexcJ6oTm3PxO5ZYzp9EbP4sk3H5k3H5U1HOO+ef8875L/MrYwFgMxLoAAAAUIBABwAAgAIEOgAAABQg0AEAAKAAgQ4AAAAFCHQAAAAoQKADAABAAQIdAAAAChDoAAAAUIBABwAAgAIEOgAAABQg0AEAAKAAgQ4AAAAFCHQAAAAoQKADAABAAQIdAAAAChDoAAAAUIBABwAAgAIEOgAAABQg0AEAAKAAgQ4AAAAFCHQAAAAoQKADAABAAQIdAAAAChDoAAAAUIBABwAAgAIEOgAAABQg0AEAAKAAgQ4AAAAFCHQAAAAoQKADAABAAQIdAAAAChDoAAAAUIBABwAAgAIEOgAAABQg0AEAAKAAgQ4AAAAFCHQAAAAoQKADAABAAQIdAAAAChDoAAAAUIBABwAAgAIEOgAAABQg0AEAAKAAgQ4AAAAFCHQAAAAoQKADAABAAQIdAAAAChDoAAAAUIBABwAAgAIEOgAAABQg0AEAAKAAgQ4AAAAFCHQAAAAoQKADAABAAQIdAAAAChDoAAAAUIBABwAAgAIEOgAAABQg0AEAAKAAgQ4AAAAFCHQAAAAoQKADAABAAQIdAAAAChDoAAAAUIBABwAAgAIEOgAAABQg0AEAAKAAgQ4AAAAFCHQAAAAoQKADAABAAQIdAAAAChDoAAAAUIBABwAAgAIEOgAAABQg0AEAAKAAgQ4AAAAFCHQAAAAoQKADAABAAQIdAAAAChDoAAAAUIBABwAAgAIEOgAAABQg0AEAAKAAgQ4AAAAFCHQAAAAoQKADAABAAQIdAAAAChDoAAAAUIBABwAAgAIEOgAAABQg0AEAAKAAgQ4AAAAFCHQAAAAoQKADAABAAQIdAAAAChDoAAAAUIBABwAAgAIEOgAAABTwH3liSGIgrxwzAAAAAElFTkSuQmCC" class="img-fluid figure-img" data-ref-parent="fig-puppies"></p>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-placeholder-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(c) This is a placeholder
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-puppies-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Cute puppies (<a href="#fig-pitbull" class="quarto-xref">Figure&nbsp;1 (a)</a> and <a href="#fig-shar-pei" class="quarto-xref">Figure&nbsp;1 (b)</a>) and placeholder (<a href="#fig-placeholder" class="quarto-xref">Figure&nbsp;1 (c)</a>).
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="video" class="level2">
+<h2 class="anchored" data-anchor-id="video">Video</h2>
+<div id="fig-cern" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cern-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/wo9vZccmqwc" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cern-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: The video “CERN: The Journey of Discovery”
+</figcaption>
+</figure>
+</div>
+<p>In <a href="#fig-cern" class="quarto-xref">Figure&nbsp;2</a>…</p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Here is the footnote.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Here’s one with multiple blocks.</p>
+<p>Subsequent paragraphs are indented to show that they belong to the previous footnote.</p>
+<pre><code>{ some.code }</code></pre>
+<p>The whole paragraph can be indented, or just the first line. In this way, multi-paragraph footnotes work like multi-paragraph list items.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Inlines notes are easier to write, since you don’t have to pick an identifier and move down to type the note.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/dieghernan\.github\.io\/brand-test\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>This is a test footer</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Visit <a href="https://posit-dev.github.io/brand-yml/">brand-yml</a> for more info.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
