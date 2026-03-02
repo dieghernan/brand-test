@@ -9,6 +9,9 @@ format:
       - href: highlight.html
         icon: code
         text: Syntax Highlighting
+      - href: quarto-features.html
+        text: Quarto Features
+        
   revealjs:
     output-file: index-reveal.html
   dashboard:
