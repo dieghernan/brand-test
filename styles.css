@@ -3,3 +3,14 @@
   font-family: "Inter Tight", Roboto;
   color: #fff;
 }
+.callout.callout-style-simple {
+	border-right: 1px solid RGBA(var(--bs-body-color-rgb), 0.1);
+	border-top: 1px solid RGBA(var(--bs-body-color-rgb), 0.1);
+	border-bottom: 1px solid RGBA(var(--bs-body-color-rgb), 0.1);
+}
+
+.callout.callout-style-default {
+	border-right: 1px solid RGBA(var(--bs-body-color-rgb), 0.1);
+	border-top: 1px solid RGBA(var(--bs-body-color-rgb), 0.1);
+	border-bottom: 1px solid RGBA(var(--bs-body-color-rgb), 0.1);
+}
