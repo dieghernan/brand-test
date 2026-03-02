@@ -31,8 +31,6 @@ jobs:
 
       shell: Rscript {0}
 
-    - uses: r-lib/actions/setup-r-dependencies@v2
-
     - name: Render and Publish
       uses: quarto-dev/quarto-actions/publish@v2
       with:
