@@ -10,6 +10,12 @@ website:
       href: https://dieghernan.github.io
     - icon: github
       href: https://github.com/dieghernan/
+    search: true
+    right:
+    - text: "Quarto Features"
+      href: quarto-features.html
+    - text: "About"
+      href: about.html
 
   favicon: ./assets/favicon.png
   page-footer:

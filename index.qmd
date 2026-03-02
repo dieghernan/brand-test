@@ -9,9 +9,7 @@ format:
       - href: highlight.html
         icon: code
         text: Syntax Highlighting
-      - href: quarto-features.html
-        text: Quarto Features
-        
+
   revealjs:
     output-file: index-reveal.html
   dashboard:
@@ -20,14 +18,12 @@ format:
 
 ## Overview
 
-This is a document themed using [**brand.yml**](https://posit-dev.github.io/brand-yml/)
+This is a document themed using
+[**brand.yml**](https://posit-dev.github.io/brand-yml/)
 
 ## Subheading
 
 {{< lipsum 1 >}}
 
 ::: {.content-visible when-format="dashboard"}
-
-
-
 :::

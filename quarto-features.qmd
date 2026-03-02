@@ -2,331 +2,7 @@
 title: quarto features
 subtitle: Using this for shortcodes
 output: html
-knitr:
-  opts_chunk:
-    collapse: true
-    comment: '#>'
 ---
-
-## Code annotations
-
-``` r
-library(tidyverse)
-library(palmerpenguins)
-penguins |>                                      # <1>
-  mutate(                                        # <2>
-    bill_ratio = bill_depth_mm / bill_length_mm, # <2>
-    bill_area  = bill_depth_mm * bill_length_mm  # <2>
-  )                                              # <2>
-```
-
-1.  Take `penguins`, and then,
-2.  add new columns for the bill ratio and bill area.
-
-## Code filename
-
-``` {.python filename="matplotlib.py"}
-import matplotlib.pyplot as plt
-plt.plot([1,23,2,4])
-plt.show()
-```
-
-## Callout Blocks
-
-```{=html}
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container"><i class="callout-icon"></i></div>
-<div class="callout-title-container flex-fill">Note</div>
-</div>
-<div class="callout-body-container callout-body">
-```
-
-Note that there are five types of callouts, including: `note`,`tip`, `warning`,
-`caution` and `important`.
-
-```{=html}
-</div>
-</div>
-```
-
-```{=html}
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container"><i class="callout-icon"></i></div>
-<div class="callout-title-container flex-fill">Warning</div>
-</div>
-<div class="callout-body-container callout-body">
-```
-
-Callouts provide a simple way to attract attention, for example, to this
-warning.
-
-```{=html}
-</div>
-</div>
-```
-
-```{=html}
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container"><i class="callout-icon"></i></div>
-<div class="callout-title-container flex-fill">Important</div>
-</div>
-<div class="callout-body-container callout-body">
-```
-
-The callout heading is provided by the callout type, with the expected heading
-(i.e., Note, Warning, Important, Tip, or Caution).
-
-```{=html}
-</div>
-</div>
-```
-
-```{=html}
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container"><i class="callout-icon"></i></div>
-<div class="callout-title-container flex-fill">Tip With Title</div>
-</div>
-<div class="callout-body-container callout-body">
-```
-
-This is an example of a callout with a title. Providing a callout heading is
-optional.
-
-```{=html}
-</div>
-</div>
-```
-
-```{=html}
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container"><i class="callout-icon"></i></div>
-<div class="callout-title-container flex-fill">Caution</div>
-</div>
-<div class="callout-body-container callout-body">
-```
-
-This is an example of a caution.
-
-```{=html}
-</div>
-</div>
-```
-
-```{=html}
-<div class="callout callout-style-simple callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container"><i class="callout-icon"></i></div>
-<div class="callout-title-container flex-fill">Simple</div>
-</div>
-<div class="callout-body-container callout-body">
-```
-
-A simple callout.
-
-```{=html}
-</div>
-</div>
-```
-
-```{=html}
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container"><i class="callout-icon no-icon"></i></div>
-<div class="callout-title-container flex-fill"><span class="screen-reader-only">Note</span>No Icon</div>
-</div>
-<div class="callout-body-container callout-body">
-```
-
-No icon
-
-```{=html}
-</div>
-</div>
-```
-
-## Diagrams
-
-```{mermaid}
-flowchart LR
-  A[Hard edge] --> B(Round edge)
-  B --> C{Decision}
-  C --> D[Result one]
-  C --> E[Result two]
-```
-
-## Keyboard
-
--   Keyboard shortcut: {{< kbd Shift-Ctrl-P >}}
-
-## Lists
-
--   item 2
-
-    Continued (indent 4 spaces)
-
-Another example
-
-1.  ordered list
-
-2.  item 2
-
-    ``` python
-    print("Hello, World!")
-    ```
-
-    A.  sub-sub-item 1
-
-A task list
-
--   [ ] Task 1
--   [x] Task 2
-
-A definition
-
-term
-
-:   definition
-
-## Footnotes
-
-Here is a footnote reference,[^1] and another.[^2]
-
-[^1]: Here is the footnote.
-
-[^2]: Here's one with multiple blocks.
-
-    Subsequent paragraphs are indented to show that they belong to the previous
-    footnote.
-
-    ```         
-    { some.code }
-    ```
-
-    The whole paragraph can be indented, or just the first line. In this way,
-    multi-paragraph footnotes work like multi-paragraph list items.
-
-This paragraph won't be part of the note, because it isn't indented.
-
-Here is an inline note.[^3]
-
-[^3]: Inlines notes are easier to write, since you don't have to pick an
-    identifier and move down to type the note.
-
-## Equations
-
-inline math: $E = mc^{2}$
-
-display math:
-
-$$E = mc^{2}$$
-
-## Other blocks
-
-| Line Block
-|   Spaces and newlines
-|   are preserved
-
-[This text is smallcaps]{.smallcaps}
-
-[This text is underlined]{.underline}
-
-[This text is highlighted]{.mark}
-
-endash: --
-
-emdash: ---
-
-## Shortcodes
-
-The subtitle of this document is as follows: {{< meta subtitle >}}
-
-{{< placeholder 400 200 >}}
-
-{{< lipsum 1 >}}
-
-### A section
-
-Here we define a plot.
-
-::: {#a-plot}
-```{r}
-#| echo: false
-#| label: a-cell
-
-plot(c(1, 2, 3))
-```
-:::
-
-#### Note the following plot
-
-{{< contents a-plot >}}
-
-### Another example
-
-We will define some values here. [`{r} "some code"`]{#a-span}
-
-The output of that inline code cell is {{< contents a-span >}}. Etc.
-
-## Figures
-
-:::: {#fig-puppies layout="[[50,50], [100]]"}
-![A sketch of a pitbull puppy](assets/pitbull.jpg){#fig-pitbull}
-
-![A sketch of a sharpei puppy](assets/shar-pei.jpg){#fig-shar-pei}
-
-::: {#fig-placeholder}
-{{< placeholder 1000 200>}}
-
-This is a placeholder
-:::
-
-Cute puppies (@fig-pitbull and @fig-shar-pei) and placeholder
-(@fig-placeholder).
-::::
-
-## Video
-
-::: {#fig-cern}
-{{< video https://www.youtube.com/embed/wo9vZccmqwc >}}
-
-The video "CERN: The Journey of Discovery"
-:::
-
-In @fig-cern...
-
-```{r}
-#| include: FALSE
-knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
-```
-
-This vignette tests pkgdown output rendering for several use cases.
-
-## Footnotes
-
-Yay[^1]
-
-[^1]: Including **footnotes**! 😁
-
-## Figures
-
-```{r}
-#| fig.alt: Test plot
-plot(1:10)
-```
-
-## External files
-
-```{r}
-x <- readLines("test.txt")
-x
-```
-
-![bacon](bacon.jpg)
 
 ## Details tag
 
@@ -355,7 +31,7 @@ Second paragraph
 ## Tables
 
 | col 1 | col 2 | col 3 | col 4 |
-|:---|:---|:--:|:--:|
+|:-------------------|:-------------------|:------------------:|:------------------:|
 | Brightness | Total brightness, total reflectance, spectral intensity | $$y = x^2$$ | test |
 
 ## Math
@@ -402,7 +78,7 @@ cat(rep("xy", 100), sep = "")
 
 Valid R code in `\preformatted{}`:
 
-```         
+```
 mean(a + 1)
 ```
 
@@ -428,7 +104,7 @@ yaml: [a, 1]
 
 Non-R code in `\preformatted{}`
 
-```         
+```
 yaml: [a, b, c]
 ```
 
@@ -599,4 +275,142 @@ the page scroll horizontally:
 
 Ccccccccccccaaaaaaaaaaaaaaatttttttttttttttttssssssssssssssss
 
+## Keyboard
 
+-   Keyboard shortcut: {{< kbd Shift-Ctrl-P >}}
+
+## Lists
+
+-   item 2
+
+    Continued (indent 4 spaces)
+
+Another example
+
+1.  ordered list
+
+2.  item 2
+
+    ``` python
+    print("Hello, World!")
+    ```
+
+    A.  sub-sub-item 1
+
+A task list
+
+-   [ ] Task 1
+-   [x] Task 2
+
+A definition
+
+term
+
+:   definition
+
+## Footnotes
+
+Here is a footnote reference,[^1] and another.[^2]
+
+[^1]: Here is the footnote.
+
+[^2]: Here's one with multiple blocks.
+
+    Subsequent paragraphs are indented to show that they belong to the previous
+    footnote.
+
+    ```
+    { some.code }
+    ```
+
+    The whole paragraph can be indented, or just the first line. In this way,
+    multi-paragraph footnotes work like multi-paragraph list items.
+
+This paragraph won't be part of the note, because it isn't indented.
+
+Here is an inline note.[^3]
+
+[^3]: Inlines notes are easier to write, since you don't have to pick an
+    identifier and move down to type the note.
+
+## Equations
+
+inline math: $E = mc^{2}$
+
+display math:
+
+$$E = mc^{2}$$
+
+## Other blocks
+
+| Line Block
+|   Spaces and newlines
+|   are preserved
+
+[This text is smallcaps]{.smallcaps}
+
+[This text is underlined]{.underline}
+
+[This text is highlighted]{.mark}
+
+endash: --
+
+emdash: ---
+
+## Shortcodes
+
+The subtitle of this document is as follows: {{< meta subtitle >}}
+
+{{< placeholder 400 200 >}}
+
+{{< lipsum 1 >}}
+
+### A section
+
+Here we define a plot.
+
+::: {#a-plot}
+```{r}
+#| echo: false
+#| label: a-cell
+
+plot(c(1, 2, 3))
+```
+:::
+
+#### Note the following plot
+
+{{< contents a-plot >}}
+
+### Another example
+
+We will define some values here. [`{r} "some code"`]{#a-span}
+
+The output of that inline code cell is {{< contents a-span >}}. Etc.
+
+## Figures
+
+:::: {#fig-puppies layout="[[50,50], [100]]"}
+![A sketch of a pitbull puppy](assets/pitbull.jpg){#fig-pitbull}
+
+![A sketch of a sharpei puppy](assets/shar-pei.jpg){#fig-shar-pei}
+
+::: {#fig-placeholder}
+{{< placeholder 1000 200>}}
+
+This is a placeholder
+:::
+
+Cute puppies (@fig-pitbull and @fig-shar-pei) and placeholder
+(@fig-placeholder).
+::::
+
+## Video
+
+::: {#fig-cern}
+{{< video https://www.youtube.com/embed/wo9vZccmqwc >}}
+
+The video "CERN: The Journey of Discovery"
+:::
+
+In @fig-cern...
