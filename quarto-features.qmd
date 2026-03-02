@@ -1,8 +1,50 @@
 ---
 title: quarto features
 subtitle: Using this for shortcodes
-output: html
 ---
+
+## Callouts
+
+::: {.callout-note}
+Note that there are five types of callouts, including:
+`note`, `warning`, `important`, `tip`, and `caution`.
+:::
+
+::: {.callout-tip}
+## Tip with Title
+
+This is an example of a callout with a title.
+:::
+
+::: {.callout-caution collapse="true"}
+## Expand To Learn About Collapse
+
+This is an example of a 'folded' caution callout that can be expanded by the user. You can use `collapse="true"` to collapse it by default or `collapse="false"` to make a collapsible callout that is expanded by default.
+:::
+
+::: {.callout-note appearance="simple"}
+
+## Pay Attention
+
+Using callouts is an effective way to highlight content that your reader give special consideration or attention.
+
+:::
+
+::: {.callout-note icon=false}
+
+## Pay Attention
+
+Using callouts is an effective way to highlight content that your reader give special consideration or attention.
+
+:::
+
+::: {#tip-example .callout-tip}
+## Cross-Referencing a Tip
+
+Add an ID starting with `#tip-` to reference a tip.
+:::
+
+See @tip-example...
 
 ## Details tag
 
@@ -211,54 +253,36 @@ There should however be no bug here!
 
 ## Tabsets
 
-### Tabset with pills {.tabset .tabset-pills}
-
-#### Tab 1
-
-blablablabla
+::: {.panel-tabset}
+## R
 
 ``` r
-1 + 1
+fizz_buzz <- function(fbnums = 1:50) {
+  output <- dplyr::case_when(
+    fbnums %% 15 == 0 ~ "FizzBuzz",
+    fbnums %% 3 == 0 ~ "Fizz",
+    fbnums %% 5 == 0 ~ "Buzz",
+    TRUE ~ as.character(fbnums)
+  )
+  print(output)
+}
 ```
 
-Should be "cool" heading below
+## Python
 
-##### cool
-
-Stuff
-
-#### Tab 2
-
-blop
-
-### Tabset without pills {.tabset}
-
-#### Tab 1
-
-something nice
-
-```{r}
-#| fig.alt: Another test plot
-plot(1:42)
+``` python
+def fizz_buzz(num):
+  if num % 15 == 0:
+    print("FizzBuzz")
+  elif num % 5 == 0:
+    print("Buzz")
+  elif num % 3 == 0:
+    print("Fizz")
+  else:
+    print(num)
 ```
 
-#### Tab 2 {.active}
-
-This tab should be active
-
-### Fading tabset {.tabset .tabset-fade}
-
-#### English
-
-Hello!
-
-#### French
-
-Bonjour!
-
-#### German
-
-Guten tag.
+:::
 
 ## Deep headings
 
