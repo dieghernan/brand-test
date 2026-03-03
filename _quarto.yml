@@ -5,6 +5,7 @@ website:
   title: "Simple Brand Example"
   navbar:
     title: "dieghernan"
+    toggle-position: right
     tools:
     - icon: home
       href: https://dieghernan.github.io
@@ -12,7 +13,7 @@ website:
       href: https://github.com/dieghernan/
     search: true
     right:
-      text: Test files
+    - text: Test files
       menu:
       - quarto-features.qmd
       - highlight.qmd
