@@ -1,6 +1,4 @@
 .navbar-brand {
-	font-weight: 700;
-	font-family: "Inter Tight", Roboto;
 	color: #fff;
 }
 .callout.callout-style-simple {
@@ -32,4 +30,34 @@ td code.sourceCode {
 main {
 	overflow-wrap: break-word;
 	hyphens: auto;
+}
+
+.dropdown-menu {
+	--bs-dropdown-link-active-bg: var(--bs-dropdown-bg);
+	--bs-dropdown-link-color: var(--bs-navbar-color);
+	--bs-dropdown-link-hover-color: #6a788a;
+	--bs-dropdown-link-hover-bg: var(--bs-dropdown-bg);
+	--bs-dropdown-header-color: var(--bs-dropdown-link-hover-color);
+}
+
+.navbar-brand,
+#navbar,
+.navbar .dropdown-item {
+	font-family: "Inter Tight", Roboto;
+	font-weight: 800;
+}
+
+.navbar,
+.nav-footer {
+	background-color: #22272e;
+	color: rgb(178, 179, 182);
+}
+
+.nav-footer a {
+	color: var(--bs-link-color);
+}
+
+.nav-footer a:hover,
+.nav-footer a:focus {
+	color: var(--bs-link-hover-color);
 }
