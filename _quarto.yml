@@ -29,10 +29,8 @@ format:
     css: styles.css
     respect-user-color-scheme: true
     toc: true
-    highlight-style:
-      light: arrow
-      dark: dracula
-
+    highlight-style: ayu
+ 
 editor: visual
 
 brand:
