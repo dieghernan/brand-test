@@ -3,6 +3,7 @@ project:
 
 website:
   title: "Simple Brand Example"
+  page-navigation: true
   navbar:
     title: "dieghernan"
     toggle-position: right
