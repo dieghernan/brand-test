@@ -16,9 +16,9 @@ website:
     right:
     - text: Test files
       menu:
-      - quarto-features.qmd
-      - highlight.qmd
-      - about.qmd
+      - docs/quarto-features.qmd
+      - docs/highlight.qmd
+      - docs/about.qmd
 
   favicon: ./assets/favicon.png
   page-footer:

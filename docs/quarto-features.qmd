@@ -416,9 +416,9 @@ The output of that inline code cell is {{< contents a-span >}}. Etc.
 ## Figures
 
 :::: {#fig-puppies layout="[[50,50], [100]]"}
-![A sketch of a pitbull puppy](assets/pitbull.jpg){#fig-pitbull}
+![A sketch of a pitbull puppy](../assets/pitbull.jpg){#fig-pitbull}
 
-![A sketch of a sharpei puppy](assets/shar-pei.jpg){#fig-shar-pei}
+![A sketch of a sharpei puppy](../assets/shar-pei.jpg){#fig-shar-pei}
 
 ::: {#fig-placeholder}
 {{< placeholder 1000 200>}}
