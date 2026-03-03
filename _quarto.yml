@@ -4,6 +4,7 @@ project:
 website:
   title: "Simple Brand Example"
   page-navigation: true
+  bread-crumbs: true
   navbar:
     title: "dieghernan"
     toggle-position: right
@@ -19,8 +20,9 @@ website:
       - docs/quarto-features.qmd
       - docs/highlight.qmd
       - docs/about.qmd
-
   favicon: ./assets/favicon.png
+  sidebar:
+    contents: auto
   page-footer:
     left: "This is a test footer"
     right: >
