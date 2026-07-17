@@ -39,5 +39,5 @@ format:
 editor: visual
 
 brand:
-  light: light_brand.yml
-  dark: dark_brand.yml
+  light: _brand.yml
+  dark: _brand-dark.yml

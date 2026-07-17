@@ -18,34 +18,30 @@ logo:
 color:
   palette:
     dark: "#24292f"
-    black: "#22272e"
+    black: "#373e47"
     white: "#ffffff"
-    gray: "#6c757d"
+    gray: "#a8b3c1"
     light: "#f8f9fa"
-    blue: "#0969da"
-    green: "#2a874b"
-    orange: "#c15807"
-    purple: "#8250df"
-    red: "#cf222e"
-    code: "#e83e8c"
-    dk-dark: "#343a40"
-    dk-black: "#373e47"
-    dk-blue: "#2b8ffd"
-    dk-green: "#2da44e"
-    dk-orange: "#d4a72c"
-    dk-red: "#d86f75"
-    dk-purple: "#9686be"
-    dk-code: "#e75ca2"
-  primary: black
+    blue: "#79b8ff"
+    green: "#6fdd8c"
+    orange: "#e3ba52"
+    purple: "#b8a7e6"
+    red: "#ee8f95"
+    code: "#ff8cc8"
+    border: "#6a788a"
+    footer-bg: "#24292f"
+    footer-text: "#8b949e"
+    footer-link: "#58a6ff"
+  primary: "#383d43"
   secondary: gray
   success: green
   warning: orange
   danger: red
   info: purple
-  dark: dk-dark
+  dark: black
   light: light
-  foreground: dark
-  background: white
+  foreground: white
+  background: dark
 
 typography:
   fonts:
@@ -76,8 +72,8 @@ defaults:
         "'Inter Tight', Roboto, system-ui, -apple-system, 'Helvetica Neue',
         Arial"
       code_font: "'Fira Code', 'Courier New', monospace"
-      code-color: "#e83e8c"
-      code-color-dark: "#e75ca2"
+      code-color: "$brand-code"
+      code-color-dark: "$brand-code"
       navbar-light-bg: "#22272e"
       navbar-light-color: "#ffffff"
       navbar-light-toggler-border-color: "#22272e"
@@ -88,7 +84,7 @@ defaults:
         7h22M4 15h22M4 23h22'/></svg>")
       navbar-light-brand-color: "#ffffff"
       navbar-light-brand-hover-color: "#ffffff"
-      navbar-light-hover-color: "#6a788a"
+      navbar-light-hover-color: "$brand-footer-text"
       navbar-light-active-color: "#d3d4d5"
       navbar-dark-bg: "#24292f"
       navbar-dark-color: "#ffffff"
@@ -100,12 +96,12 @@ defaults:
         7h22M4 15h22M4 23h22'/></svg>")
       navbar-dark-brand-hover-color: "#ffffff"
       navbar-dark-toggler-border-color: "#24292f"
-      navbar-dark-hover-color: "#6a788a"
+      navbar-dark-hover-color: "$brand-gray"
       navbar-dark-active-color: "#d3d4d5"
-      input-placeholder-color: "#6a788a"
+      input-placeholder-color: "$brand-footer-text"
       link-decoration: none
-      pkgdown-footer-bg: "#0d1117"
-      pkgdown-footer-color: "#8b949e"
+      pkgdown-footer-bg: "$brand-footer-bg"
+      pkgdown-footer-color: "$brand-footer-text"
       dropdown-bg: "#22272e"
       dropdown-border-color: "#6c757d80"
       dropdown-divider-bg: "#6c757d80"
@@ -114,6 +110,6 @@ defaults:
       dropdown-dark-divider-bg: "#6c757d80"
       nav-pills-link-active-bg: "#24292f"
       nav-pills-link-active-color: "#ffffff"
-      nav-link-hover-color: "#6a788a"
-      nav-link-color: "#6c757d"
+      nav-link-hover-color: "$brand-blue"
+      nav-link-color: "$brand-footer-text"
       nav-link-font-weight: 800
